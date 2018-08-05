@@ -1,0 +1,52 @@
+{
+    "sensor_types": [
+        {
+            "type": "accelerometer",
+            "id": "true",
+            "timestamp": "true",
+            "dist_rate": "uniform",
+            "rate_params": {
+                "lower_limit": "1",
+                "upper_limit": "10",
+                "unit": "s"
+            },
+            "dist_value": "normal",
+            "value_params": {
+                "mean": "150",
+                "variance": "50",
+                "min_value": "25"
+            }
+        },
+        {
+            "type": "gyroscope",
+            "id": "true",
+            "timestamp": "true",
+            "dist_rate": "normal",
+            "rate_params": {
+                "mean": "20",
+                "variance": "5",
+                "min_value": "2",
+                "unit": "s"
+            },
+            "dist_value": "poisson",
+            "value_params": {
+                "lambda": "15",
+                "min_value": "5"
+            }
+        },
+        {
+            "type": "custom",
+            "id": "true",
+            "timestamp": "true",
+            "dist_rate": "user_defined",
+            "rate_params": {
+                "path": "sensors_data_gen/data/time.csv",
+                "unit": "s"
+            },
+            "dist_value": "user_defined",
+            "value_params": {
+                "path": "sensors_data_gen/data/data.csv"
+            }
+        }
+    ]
+}
