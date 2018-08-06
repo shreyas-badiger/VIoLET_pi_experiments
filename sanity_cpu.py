@@ -67,8 +67,8 @@ if flag == 1:
 
         for command in commands:
             stdin , stdout, stderr = gw_client.exec_command(command)
-            print stdout.read()
-            print stderr.read()
+            #print stdout.read()
+            #print stderr.read()
 
         gw_client.close()
 
@@ -125,7 +125,7 @@ if flag == 2:
         gw = p_dict["gateway"]
         devices = p_dict["devices"]
 
-        pub_network =deployment_output[gw]["public_networks"].keys()
+        pub_network = deployment_output[gw]["public_networks"].keys()
         gw_host = deployment_output[gw]["public_networks"][pub_network[0]]["ip"]
         gw_port = deployment_output[gw]["public_networks"][pub_network[0]]["port"]
         gw_user = "pi"
@@ -137,11 +137,13 @@ if flag == 2:
         gw_client.connect(hostname = gw_host, port = gw_port, username = gw_user, pkey = k)
 
         print "\n\nCollecting numbers in {0}".format(gw)
-        command = "cat results-coremark | grep \"CoreMark 1.0\" | awk '{{print $4}}'"
+        command = "cat /home/pi/coremark/results-coremark | grep \"CoreMark 1.0\" | awk '{{print $4}}'"
+        print command
         stdin , stdout, stderr = gw_client.exec_command(command)
         print stderr.read()
 
         observed_coremark = stdout.read()
+        print "observed_coremark - {0}".format(observed_coremark)
         observed_coremark = observed_coremark.split("\n")
         observed_coremark.pop()
         for i in observed_coremark:
@@ -153,6 +155,7 @@ if flag == 2:
             c_avg = float(sum(coremark)) /float(len(coremark))
         else:
             c_avg = 0
+            print observed_coremark
             print "len(coremark) = 0"
 
         d_type = infra_config["devices"][gw]["device_type"]
