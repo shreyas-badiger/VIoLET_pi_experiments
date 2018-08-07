@@ -1,0 +1,1 @@
+{"expected_bandwidth_mbps": "100", "latency_numbers": {"Fog-2": {"device_2": "Fog-3", "device_1": "Fog-2", "observed_latency_ms": "13.8"}}, "expected_latency_ms": "0.6", "bandwidth_numbers": {"Fog-2": {"observed_bandwidth_mbps": "", "device1": "Fog-2", "device2": "Fog-3"}, "Fog-1": {"observed_bandwidth_mbps": "26.5", "device1": "Fog-1", "device2": "Fog-3"}}}

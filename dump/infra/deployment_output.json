@@ -1,1 +1,621 @@
-{"Edge-3.5": {"host_vm_name": "M1", "host_vm_ip": "10.0.0.5", "sensors": [{"sensor_type": "accelerometer", "links": ["http://172.24.2.83:38566/sensors/accelerometer_1"]}, {"sensor_type": "gyroscope", "links": ["http://172.24.2.83:38566/sensors/gyroscope_1"]}, {"sensor_type": "custom", "links": ["http://172.24.2.83:38566/sensors/custom_3", "http://172.24.2.83:38566/sensors/custom_2", "http://172.24.2.83:38566/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_3": "172.24.2.83"}}, "Edge-3.4": {"host_vm_name": "M3", "host_vm_ip": "10.0.0.7", "sensors": [{"sensor_type": "gyroscope", "links": ["http://172.24.2.13:43119/sensors/gyroscope_1"]}, {"sensor_type": "accelerometer", "links": ["http://172.24.2.13:43119/sensors/accelerometer_2", "http://172.24.2.13:43119/sensors/accelerometer_1"]}, {"sensor_type": "custom", "links": ["http://172.24.2.13:43119/sensors/custom_2", "http://172.24.2.13:43119/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_3": "172.24.2.13"}}, "Edge-3.1": {"host_vm_name": "M1", "host_vm_ip": "10.0.0.5", "sensors": [{"sensor_type": "gyroscope", "links": ["http://172.24.2.7:35504/sensors/gyroscope_1"]}, {"sensor_type": "accelerometer", "links": ["http://172.24.2.7:35504/sensors/accelerometer_1"]}, {"sensor_type": "custom", "links": ["http://172.24.2.7:35504/sensors/custom_3", "http://172.24.2.7:35504/sensors/custom_2", "http://172.24.2.7:35504/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_3": "172.24.2.7"}}, "Edge-3.3": {"host_vm_name": "M3", "host_vm_ip": "10.0.0.7", "sensors": [{"sensor_type": "gyroscope", "links": ["http://172.24.2.59:26169/sensors/gyroscope_3", "http://172.24.2.59:26169/sensors/gyroscope_2", "http://172.24.2.59:26169/sensors/gyroscope_1"]}, {"sensor_type": "custom", "links": ["http://172.24.2.59:26169/sensors/custom_2", "http://172.24.2.59:26169/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_3": "172.24.2.59"}}, "Edge-3.2": {"host_vm_name": "M3", "host_vm_ip": "10.0.0.7", "sensors": [{"sensor_type": "accelerometer", "links": ["http://172.24.2.41:11119/sensors/accelerometer_2", "http://172.24.2.41:11119/sensors/accelerometer_1"]}, {"sensor_type": "gyroscope", "links": ["http://172.24.2.41:11119/sensors/gyroscope_2", "http://172.24.2.41:11119/sensors/gyroscope_1"]}, {"sensor_type": "custom", "links": ["http://172.24.2.41:11119/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_3": "172.24.2.41"}}, "Fog-2": {"public_global_network": "10.0.2.3", "private_networks": {"violet_private_2": "172.24.3.1"}, "host_vm_name": "M1", "public_networks": {"violet_public_1": {"ip": "10.24.24.227", "port": 22002}, "docker_d0_bridge": "172.17.0.4"}, "host_vm_ip": "10.0.0.5", "sensors": [{"sensor_type": "accelerometer", "links": ["http://10.24.24.227:12452/sensors/accelerometer_1"]}, {"sensor_type": "custom", "links": ["http://10.24.24.227:12452/sensors/custom_4", "http://10.24.24.227:12452/sensors/custom_3", "http://10.24.24.227:12452/sensors/custom_2", "http://10.24.24.227:12452/sensors/custom_1"]}]}, "Fog-3": {"public_global_network": "10.0.2.4", "private_networks": {"violet_private_3": "172.24.2.1"}, "host_vm_name": "M1", "public_networks": {"violet_public_1": {"ip": "10.24.24.227", "port": 22001}, "docker_d0_bridge": "172.17.0.5"}, "host_vm_ip": "10.0.0.5", "sensors": [{"sensor_type": "gyroscope", "links": ["http://10.24.24.227:37109/sensors/gyroscope_1"]}, {"sensor_type": "custom", "links": ["http://10.24.24.227:37109/sensors/custom_4", "http://10.24.24.227:37109/sensors/custom_3", "http://10.24.24.227:37109/sensors/custom_2", "http://10.24.24.227:37109/sensors/custom_1"]}]}, "Edge-1.5": {"host_vm_name": "M3", "host_vm_ip": "10.0.0.7", "sensors": [{"sensor_type": "gyroscope", "links": ["http://172.24.1.24:22975/sensors/gyroscope_4", "http://172.24.1.24:22975/sensors/gyroscope_3", "http://172.24.1.24:22975/sensors/gyroscope_2", "http://172.24.1.24:22975/sensors/gyroscope_1"]}, {"sensor_type": "custom", "links": ["http://172.24.1.24:22975/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_1": "172.24.1.24"}}, "Fog-1": {"public_global_network": "10.0.2.2", "private_networks": {"violet_private_1": "172.24.1.1"}, "host_vm_name": "M2", "public_networks": {"violet_public_1": {"ip": "10.24.24.227", "port": 22000}, "docker_d0_bridge": "172.17.0.2"}, "host_vm_ip": "10.0.0.6", "sensors": [{"sensor_type": "gyroscope", "links": ["http://10.24.24.227:30079/sensors/gyroscope_2", "http://10.24.24.227:30079/sensors/gyroscope_1"]}, {"sensor_type": "accelerometer", "links": ["http://10.24.24.227:30079/sensors/accelerometer_2", "http://10.24.24.227:30079/sensors/accelerometer_1"]}, {"sensor_type": "custom", "links": ["http://10.24.24.227:30079/sensors/custom_1"]}]}, "Edge-1.3": {"host_vm_name": "M2", "host_vm_ip": "10.0.0.6", "sensors": [{"sensor_type": "gyroscope", "links": ["http://172.24.1.46:48297/sensors/gyroscope_3", "http://172.24.1.46:48297/sensors/gyroscope_2", "http://172.24.1.46:48297/sensors/gyroscope_1"]}, {"sensor_type": "custom", "links": ["http://172.24.1.46:48297/sensors/custom_2", "http://172.24.1.46:48297/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_1": "172.24.1.46"}}, "Edge-1.2": {"host_vm_name": "M2", "host_vm_ip": "10.0.0.6", "sensors": [{"sensor_type": "custom", "links": ["http://172.24.1.19:38624/sensors/custom_5", "http://172.24.1.19:38624/sensors/custom_4", "http://172.24.1.19:38624/sensors/custom_3", "http://172.24.1.19:38624/sensors/custom_2", "http://172.24.1.19:38624/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_1": "172.24.1.19"}}, "Edge-1.1": {"host_vm_name": "M3", "host_vm_ip": "10.0.0.7", "sensors": [{"sensor_type": "gyroscope", "links": ["http://172.24.1.23:25953/sensors/gyroscope_2", "http://172.24.1.23:25953/sensors/gyroscope_1"]}, {"sensor_type": "accelerometer", "links": ["http://172.24.1.23:25953/sensors/accelerometer_1"]}, {"sensor_type": "custom", "links": ["http://172.24.1.23:25953/sensors/custom_2", "http://172.24.1.23:25953/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_1": "172.24.1.23"}}, "Edge-2.1": {"host_vm_name": "M1", "host_vm_ip": "10.0.0.5", "sensors": [{"sensor_type": "gyroscope", "links": ["http://172.24.3.90:50508/sensors/gyroscope_3", "http://172.24.3.90:50508/sensors/gyroscope_2", "http://172.24.3.90:50508/sensors/gyroscope_1"]}, {"sensor_type": "accelerometer", "links": ["http://172.24.3.90:50508/sensors/accelerometer_2", "http://172.24.3.90:50508/sensors/accelerometer_1"]}], "public_networks": {}, "private_networks": {"violet_private_2": "172.24.3.90"}}, "Edge-2.2": {"host_vm_name": "M4", "host_vm_ip": "10.0.0.8", "sensors": [{"sensor_type": "accelerometer", "links": ["http://172.24.3.27:33505/sensors/accelerometer_4", "http://172.24.3.27:33505/sensors/accelerometer_3", "http://172.24.3.27:33505/sensors/accelerometer_2", "http://172.24.3.27:33505/sensors/accelerometer_1"]}, {"sensor_type": "custom", "links": ["http://172.24.3.27:33505/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_2": "172.24.3.27"}}, "Edge-2.3": {"host_vm_name": "M4", "host_vm_ip": "10.0.0.8", "sensors": [{"sensor_type": "accelerometer", "links": ["http://172.24.3.66:41261/sensors/accelerometer_2", "http://172.24.3.66:41261/sensors/accelerometer_1"]}, {"sensor_type": "gyroscope", "links": ["http://172.24.3.66:41261/sensors/gyroscope_1"]}, {"sensor_type": "custom", "links": ["http://172.24.3.66:41261/sensors/custom_2", "http://172.24.3.66:41261/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_2": "172.24.3.66"}}, "Edge-2.4": {"host_vm_name": "M4", "host_vm_ip": "10.0.0.8", "sensors": [{"sensor_type": "gyroscope", "links": ["http://172.24.3.83:49882/sensors/gyroscope_1"]}, {"sensor_type": "accelerometer", "links": ["http://172.24.3.83:49882/sensors/accelerometer_2", "http://172.24.3.83:49882/sensors/accelerometer_1"]}, {"sensor_type": "custom", "links": ["http://172.24.3.83:49882/sensors/custom_2", "http://172.24.3.83:49882/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_2": "172.24.3.83"}}, "Edge-2.5": {"host_vm_name": "M1", "host_vm_ip": "10.0.0.5", "sensors": [{"sensor_type": "accelerometer", "links": ["http://172.24.3.68:55284/sensors/accelerometer_1"]}, {"sensor_type": "custom", "links": ["http://172.24.3.68:55284/sensors/custom_4", "http://172.24.3.68:55284/sensors/custom_3", "http://172.24.3.68:55284/sensors/custom_2", "http://172.24.3.68:55284/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_2": "172.24.3.68"}}, "Edge-2.6": {"host_vm_name": "M4", "host_vm_ip": "10.0.0.8", "sensors": [{"sensor_type": "gyroscope", "links": ["http://172.24.3.37:3744/sensors/gyroscope_2", "http://172.24.3.37:3744/sensors/gyroscope_1"]}, {"sensor_type": "accelerometer", "links": ["http://172.24.3.37:3744/sensors/accelerometer_2", "http://172.24.3.37:3744/sensors/accelerometer_1"]}, {"sensor_type": "custom", "links": ["http://172.24.3.37:3744/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_2": "172.24.3.37"}}, "Edge-2.7": {"host_vm_name": "M4", "host_vm_ip": "10.0.0.8", "sensors": [{"sensor_type": "accelerometer", "links": ["http://172.24.3.67:11163/sensors/accelerometer_3", "http://172.24.3.67:11163/sensors/accelerometer_2", "http://172.24.3.67:11163/sensors/accelerometer_1"]}, {"sensor_type": "custom", "links": ["http://172.24.3.67:11163/sensors/custom_2", "http://172.24.3.67:11163/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_2": "172.24.3.67"}}, "Edge-1.7": {"host_vm_name": "M2", "host_vm_ip": "10.0.0.6", "sensors": [{"sensor_type": "gyroscope", "links": ["http://172.24.1.60:5467/sensors/gyroscope_1"]}, {"sensor_type": "custom", "links": ["http://172.24.1.60:5467/sensors/custom_4", "http://172.24.1.60:5467/sensors/custom_3", "http://172.24.1.60:5467/sensors/custom_2", "http://172.24.1.60:5467/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_1": "172.24.1.60"}}, "Edge-1.6": {"host_vm_name": "M3", "host_vm_ip": "10.0.0.7", "sensors": [{"sensor_type": "gyroscope", "links": ["http://172.24.1.97:22291/sensors/gyroscope_3", "http://172.24.1.97:22291/sensors/gyroscope_2", "http://172.24.1.97:22291/sensors/gyroscope_1"]}, {"sensor_type": "custom", "links": ["http://172.24.1.97:22291/sensors/custom_2", "http://172.24.1.97:22291/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_1": "172.24.1.97"}}, "Edge-1.4": {"host_vm_name": "M2", "host_vm_ip": "10.0.0.6", "sensors": [{"sensor_type": "gyroscope", "links": ["http://172.24.1.29:33795/sensors/gyroscope_1"]}, {"sensor_type": "accelerometer", "links": ["http://172.24.1.29:33795/sensors/accelerometer_2", "http://172.24.1.29:33795/sensors/accelerometer_1"]}, {"sensor_type": "custom", "links": ["http://172.24.1.29:33795/sensors/custom_2", "http://172.24.1.29:33795/sensors/custom_1"]}], "public_networks": {}, "private_networks": {"violet_private_1": "172.24.1.29"}}}
+{
+  "Edge-3.5": {
+    "host_vm_name": "M1",
+    "host_vm_ip": "10.0.0.5",
+    "sensors": [
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.2.83:38566/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.2.83:38566/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.2.83:38566/sensors/custom_3",
+          "http://172.24.2.83:38566/sensors/custom_2",
+          "http://172.24.2.83:38566/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_3": "172.24.2.83"
+    }
+  },
+  "Edge-3.4": {
+    "host_vm_name": "M3",
+    "host_vm_ip": "10.0.0.7",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.2.13:43119/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.2.13:43119/sensors/accelerometer_2",
+          "http://172.24.2.13:43119/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.2.13:43119/sensors/custom_2",
+          "http://172.24.2.13:43119/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_3": "172.24.2.13"
+    }
+  },
+  "Edge-3.1": {
+    "host_vm_name": "M1",
+    "host_vm_ip": "10.0.0.5",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.2.7:35504/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.2.7:35504/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.2.7:35504/sensors/custom_3",
+          "http://172.24.2.7:35504/sensors/custom_2",
+          "http://172.24.2.7:35504/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_3": "172.24.2.7"
+    }
+  },
+  "Edge-3.3": {
+    "host_vm_name": "M3",
+    "host_vm_ip": "10.0.0.7",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.2.59:26169/sensors/gyroscope_3",
+          "http://172.24.2.59:26169/sensors/gyroscope_2",
+          "http://172.24.2.59:26169/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.2.59:26169/sensors/custom_2",
+          "http://172.24.2.59:26169/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_3": "172.24.2.59"
+    }
+  },
+  "Edge-3.2": {
+    "host_vm_name": "M3",
+    "host_vm_ip": "10.0.0.7",
+    "sensors": [
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.2.41:11119/sensors/accelerometer_2",
+          "http://172.24.2.41:11119/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.2.41:11119/sensors/gyroscope_2",
+          "http://172.24.2.41:11119/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.2.41:11119/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_3": "172.24.2.41"
+    }
+  },
+  "Fog-2": {
+    "public_global_network": "10.0.2.3",
+    "private_networks": {
+      "violet_private_2": "172.24.3.1"
+    },
+    "host_vm_name": "M1",
+    "public_networks": {
+      "violet_public_1": {
+        "device_ip":"192.168.0.4",
+        "ip": "10.24.24.227",
+        "port": 22002
+      },
+      "docker_d0_bridge": "172.17.0.4"
+    },
+    "host_vm_ip": "10.0.0.5",
+    "sensors": [
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://10.24.24.227:12452/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://10.24.24.227:12452/sensors/custom_4",
+          "http://10.24.24.227:12452/sensors/custom_3",
+          "http://10.24.24.227:12452/sensors/custom_2",
+          "http://10.24.24.227:12452/sensors/custom_1"
+        ]
+      }
+    ]
+  },
+  "Fog-3": {
+    "public_global_network": "10.0.2.4",
+    "private_networks": {
+      "violet_private_3": "172.24.2.1"
+    },
+    "host_vm_name": "M1",
+    "public_networks": {
+      "violet_public_1": {
+        "device_ip":"192.168.0.3",
+        "ip": "10.24.24.227",
+        "port": 22001
+      },
+      "docker_d0_bridge": "172.17.0.5"
+    },
+    "host_vm_ip": "10.0.0.5",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://10.24.24.227:37109/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://10.24.24.227:37109/sensors/custom_4",
+          "http://10.24.24.227:37109/sensors/custom_3",
+          "http://10.24.24.227:37109/sensors/custom_2",
+          "http://10.24.24.227:37109/sensors/custom_1"
+        ]
+      }
+    ]
+  },
+  "Edge-1.5": {
+    "host_vm_name": "M3",
+    "host_vm_ip": "10.0.0.7",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.1.24:22975/sensors/gyroscope_4",
+          "http://172.24.1.24:22975/sensors/gyroscope_3",
+          "http://172.24.1.24:22975/sensors/gyroscope_2",
+          "http://172.24.1.24:22975/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.1.24:22975/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_1": "172.24.1.24"
+    }
+  },
+  "Fog-1": {
+    "public_global_network": "10.0.2.2",
+    "private_networks": {
+      "violet_private_1": "172.24.1.1"
+    },
+    "host_vm_name": "M2",
+    "public_networks": {
+      "violet_public_1": {
+        "device_ip":"192.168.0.2",
+        "ip": "10.24.24.227",
+        "port": 22000
+      },
+      "docker_d0_bridge": "172.17.0.2"
+    },
+    "host_vm_ip": "10.0.0.6",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://10.24.24.227:30079/sensors/gyroscope_2",
+          "http://10.24.24.227:30079/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://10.24.24.227:30079/sensors/accelerometer_2",
+          "http://10.24.24.227:30079/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://10.24.24.227:30079/sensors/custom_1"
+        ]
+      }
+    ]
+  },
+  "Edge-1.3": {
+    "host_vm_name": "M2",
+    "host_vm_ip": "10.0.0.6",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.1.46:48297/sensors/gyroscope_3",
+          "http://172.24.1.46:48297/sensors/gyroscope_2",
+          "http://172.24.1.46:48297/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.1.46:48297/sensors/custom_2",
+          "http://172.24.1.46:48297/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_1": "172.24.1.46"
+    }
+  },
+  "Edge-1.2": {
+    "host_vm_name": "M2",
+    "host_vm_ip": "10.0.0.6",
+    "sensors": [
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.1.19:38624/sensors/custom_5",
+          "http://172.24.1.19:38624/sensors/custom_4",
+          "http://172.24.1.19:38624/sensors/custom_3",
+          "http://172.24.1.19:38624/sensors/custom_2",
+          "http://172.24.1.19:38624/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_1": "172.24.1.19"
+    }
+  },
+  "Edge-1.1": {
+    "host_vm_name": "M3",
+    "host_vm_ip": "10.0.0.7",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.1.23:25953/sensors/gyroscope_2",
+          "http://172.24.1.23:25953/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.1.23:25953/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.1.23:25953/sensors/custom_2",
+          "http://172.24.1.23:25953/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_1": "172.24.1.23"
+    }
+  },
+  "Edge-2.1": {
+    "host_vm_name": "M1",
+    "host_vm_ip": "10.0.0.5",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.3.90:50508/sensors/gyroscope_3",
+          "http://172.24.3.90:50508/sensors/gyroscope_2",
+          "http://172.24.3.90:50508/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.3.90:50508/sensors/accelerometer_2",
+          "http://172.24.3.90:50508/sensors/accelerometer_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_2": "172.24.3.90"
+    }
+  },
+  "Edge-2.2": {
+    "host_vm_name": "M4",
+    "host_vm_ip": "10.0.0.8",
+    "sensors": [
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.3.27:33505/sensors/accelerometer_4",
+          "http://172.24.3.27:33505/sensors/accelerometer_3",
+          "http://172.24.3.27:33505/sensors/accelerometer_2",
+          "http://172.24.3.27:33505/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.3.27:33505/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_2": "172.24.3.27"
+    }
+  },
+  "Edge-2.3": {
+    "host_vm_name": "M4",
+    "host_vm_ip": "10.0.0.8",
+    "sensors": [
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.3.66:41261/sensors/accelerometer_2",
+          "http://172.24.3.66:41261/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.3.66:41261/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.3.66:41261/sensors/custom_2",
+          "http://172.24.3.66:41261/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_2": "172.24.3.66"
+    }
+  },
+  "Edge-2.4": {
+    "host_vm_name": "M4",
+    "host_vm_ip": "10.0.0.8",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.3.83:49882/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.3.83:49882/sensors/accelerometer_2",
+          "http://172.24.3.83:49882/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.3.83:49882/sensors/custom_2",
+          "http://172.24.3.83:49882/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_2": "172.24.3.83"
+    }
+  },
+  "Edge-2.5": {
+    "host_vm_name": "M1",
+    "host_vm_ip": "10.0.0.5",
+    "sensors": [
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.3.68:55284/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.3.68:55284/sensors/custom_4",
+          "http://172.24.3.68:55284/sensors/custom_3",
+          "http://172.24.3.68:55284/sensors/custom_2",
+          "http://172.24.3.68:55284/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_2": "172.24.3.68"
+    }
+  },
+  "Edge-2.6": {
+    "host_vm_name": "M4",
+    "host_vm_ip": "10.0.0.8",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.3.37:3744/sensors/gyroscope_2",
+          "http://172.24.3.37:3744/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.3.37:3744/sensors/accelerometer_2",
+          "http://172.24.3.37:3744/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.3.37:3744/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_2": "172.24.3.37"
+    }
+  },
+  "Edge-2.7": {
+    "host_vm_name": "M4",
+    "host_vm_ip": "10.0.0.8",
+    "sensors": [
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.3.67:11163/sensors/accelerometer_3",
+          "http://172.24.3.67:11163/sensors/accelerometer_2",
+          "http://172.24.3.67:11163/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.3.67:11163/sensors/custom_2",
+          "http://172.24.3.67:11163/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_2": "172.24.3.67"
+    }
+  },
+  "Edge-1.7": {
+    "host_vm_name": "M2",
+    "host_vm_ip": "10.0.0.6",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.1.60:5467/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.1.60:5467/sensors/custom_4",
+          "http://172.24.1.60:5467/sensors/custom_3",
+          "http://172.24.1.60:5467/sensors/custom_2",
+          "http://172.24.1.60:5467/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_1": "172.24.1.60"
+    }
+  },
+  "Edge-1.6": {
+    "host_vm_name": "M3",
+    "host_vm_ip": "10.0.0.7",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.1.97:22291/sensors/gyroscope_3",
+          "http://172.24.1.97:22291/sensors/gyroscope_2",
+          "http://172.24.1.97:22291/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.1.97:22291/sensors/custom_2",
+          "http://172.24.1.97:22291/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_1": "172.24.1.97"
+    }
+  },
+  "Edge-1.4": {
+    "host_vm_name": "M2",
+    "host_vm_ip": "10.0.0.6",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.1.29:33795/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.1.29:33795/sensors/accelerometer_2",
+          "http://172.24.1.29:33795/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.1.29:33795/sensors/custom_2",
+          "http://172.24.1.29:33795/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_1": "172.24.1.29"
+    }
+  }
+}

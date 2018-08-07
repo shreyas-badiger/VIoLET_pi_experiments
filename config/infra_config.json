@@ -1,21 +1,21 @@
 {
   "public_global_network": {
     "subnet": "10.0.2.0/24",
-    "bandwidth_mbps": "10",
+    "bandwidth_mbps": "100",
     "ip_range": "10.0.2.0/24",
     "devices": [
       "Fog-1",
       "Fog-2",
       "Fog-3"
     ],
-    "latency_ms": "100"
+    "latency_ms": "0.6"
   },
   "block_network_route": [],
   "public_networks": {
     "violet_public_1": {
       "subnet": "10.0.1.0/24",
-      "bandwidth_mbps": "10",
-      "latency_ms": "100",
+      "bandwidth_mbps": "100",
+      "latency_ms": "0.6",
       "devices": [
         "Fog-1",
         "Fog-2",
@@ -374,8 +374,8 @@
   "private_networks": {
     "violet_private_1": {
       "subnet": "192.168.1.0/24",
-      "bandwidth_mbps": "10",
-      "latency_ms": "75",
+      "bandwidth_mbps": "300",
+      "latency_ms": "0.6",
       "devices": [
         "Edge-1.1",
         "Edge-1.2",
@@ -390,8 +390,8 @@
     },
     "violet_private_2": {
       "subnet": "192.168.2.0/24",
-      "bandwidth_mbps": "10",
-      "latency_ms": "50",
+      "bandwidth_mbps": "300",
+      "latency_ms": "0.6",
       "devices": [
         "Edge-2.1",
         "Edge-2.2",
@@ -406,8 +406,8 @@
     },
     "violet_private_3": {
       "subnet": "192.168.3.0/24",
-      "bandwidth_mbps": "20",
-      "latency_ms": "25",
+      "bandwidth_mbps": "100",
+      "latency_ms": "0.6",
       "devices": [
         "Edge-3.1",
         "Edge-3.2",
