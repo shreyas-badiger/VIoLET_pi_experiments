@@ -9,6 +9,70 @@ from threading import Thread
 
 startTime = datetime.now()
 
+cm_device_all = json.load(open("cm_device_all"))
+
+devices = cm_device_all.keys()
+
+f_Pi3B_p = open("f_Pi3B_p","w")
+f_Pi3B = open("f_Pi3B","w")
+
+pi3b_p = {}
+pi3b = {}
+
+for d in devices:
+    if cm_device_all[d]["device_type"] == "Pi3B+":
+        pi3b_p[d] = cm_device_all[d]
+    elif cm_device_all[d]["device_type"] == "Pi3B":
+        pi3b[d] = cm_device_all[d]
+
+"""
+pi3b_p_devices = pi3b_p.keys()
+for p in pi3b_p_devices:
+    print p
+    cm = pi3b_p[p]["coremark"]
+    for c in cm:
+        print c
+    time.sleep(15)
+"""
+
+pi3b_devices = pi3b.keys()
+for p in pi3b_devices:
+    print p
+    cm = pi3b[p]["coremark"]
+    for c in cm:
+        print c
+    time.sleep(15)
+
+
+
+"""
+for i in range(0, 205):
+    for j in range(0,len(pi3b_p_devices)):
+
+        d = pi3b_p_devices[j]
+        cm = pi3b_p[d]["coremark"]
+        if(i < len(cm)):
+            f_Pi3B_p.write(cm[i]+",")
+        else:
+            f_Pi3B_p.write(",")
+
+    f_Pi3B_p.write("\n")
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 sanity = {}
 
 latency_delta = open("latency_delta","w")
@@ -47,3 +111,4 @@ for i in sanity:
             print per
             bandwidth_delta.write(str(per)+"\n")
 bandwidth_delta.close()
+"""

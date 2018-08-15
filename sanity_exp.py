@@ -35,6 +35,7 @@ print
 
 
 print "**************************** [Sanity] CPU allocation****************************"
+
 if flag == 1:
     print '**********PART-1**********'
     for p in private_networks_dict:
@@ -100,6 +101,7 @@ if flag == 1:
             command = "python {0}/c_coremark.py &".format(pvt_dev_path)
             stdin , stdout, stderr = pvt_dev_client.exec_command(command)
 
+
 if flag == 2:
     print '**********PART-2**********'
 
@@ -136,14 +138,14 @@ if flag == 2:
 
         print "\n\nCollecting numbers in {0}".format(gw)
         command = "cat /home/pi/coremark/results-coremark | grep \"CoreMark 1.0\" | awk '{{print $4}}'"
+        print command
         stdin , stdout, stderr = gw_client.exec_command(command)
+        print stderr.read()
 
         observed_coremark = stdout.read()
+        print "observed_coremark - {0}".format(observed_coremark)
         observed_coremark = observed_coremark.split("\n")
         observed_coremark.pop()
-
-        coremark = []
-        cm_d = {}
         for i in observed_coremark:
             coremark.append(float(i))
         coremark.sort()
@@ -157,8 +159,6 @@ if flag == 2:
             print "len(coremark) = 0"
 
         d_type = infra_config["devices"][gw]["device_type"]
-        print "device - {0}, device_type - {1}".format(gw, d_type)
-
         expected_coremark = device_types[d_type]["coremark"]
         cm_d["device_type"] = d_type
         coremark_str = []
@@ -212,13 +212,11 @@ if flag == 2:
             print "\n\nCollecting numbers in {0}".format(d)
             command = "cat results-coremark | grep \"CoreMark 1.0\" | awk '{{print $4}}'"
             stdin , stdout, stderr = pvt_dev_client.exec_command(command)
+            print stderr.read()
 
             observed_coremark = stdout.read()
             observed_coremark = observed_coremark.split("\n")
             observed_coremark.pop()
-
-            coremark = []
-            cm_d = {}
             for i in observed_coremark:
                 coremark.append(float(i))
             coremark.sort()
@@ -231,7 +229,6 @@ if flag == 2:
                 print "len(coremark) = 0"
 
             d_type = infra_config["devices"][d]["device_type"]
-            print "device - {0}, device_type - {1}".format(d, d_type)
             expected_coremark = device_types[d_type]["coremark"]
             cm_d["device_type"] = d_type
             coremark_str = []
