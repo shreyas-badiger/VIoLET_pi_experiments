@@ -26,6 +26,43 @@
     }
   },
   "devices": {
+    "Edge-3.7": {
+      "sensors": [
+        {
+          "count": 1,
+          "sensor_type": "accelerometer"
+        },
+        {
+          "count": 1,
+          "sensor_type": "gyroscope"
+        },
+        {
+          "count": 3,
+          "sensor_type": "custom"
+        }
+      ],
+      "port": 38566,
+      "device_type": "Pi2B"
+    },
+   "Edge-3.6": {
+      "sensors": [
+        {
+          "count": 1,
+          "sensor_type": "accelerometer"
+        },
+        {
+          "count": 1,
+          "sensor_type": "gyroscope"
+        },
+        {
+          "count": 3,
+          "sensor_type": "custom"
+        }
+      ],
+      "port": 38566,
+      "device_type": "Pi2B"
+    },
+
     "Edge-3.5": {
       "sensors": [
         {
@@ -413,7 +450,9 @@
         "Edge-3.2",
         "Edge-3.3",
         "Edge-3.4",
-        "Edge-3.5"
+        "Edge-3.5",
+        "Edge-3.6",
+        "Edge-3.7"
       ],
       "ip_range": "192.168.3.0/24",
       "gateway": "Fog-3"

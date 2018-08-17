@@ -38,6 +38,7 @@ print "**************************** [Sanity] CPU allocation*********************
 if flag == 1:
     print '**********PART-1**********'
     for p in private_networks_dict:
+        #p = "violet_private_3"
         print "\n\n\n@@@@@@@@@@@@@@@@@@@@@@@@@@\nNETWORK - {0}\n\n".format(p)
         p_dict = private_networks_dict[p]
         gw = p_dict["gateway"]
@@ -81,6 +82,7 @@ if flag == 1:
             pvt_dev_user = "pi"
             local_addr = (gw_host, gw_port)
             dest_addr = (pvt_dev_host, pvt_dev_port)
+            print "local_addr = {} dest_addr = {}".format(local_addr, dest_addr)
             gw_client_channel = gw_client_transport.open_channel("direct-tcpip", dest_addr, local_addr)
             pvt_dev_client = paramiko.SSHClient()
             pvt_dev_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -100,6 +102,8 @@ if flag == 1:
             command = "python {0}/c_coremark.py &".format(pvt_dev_path)
             stdin , stdout, stderr = pvt_dev_client.exec_command(command)
 
+        break
+
 if flag == 2:
     print '**********PART-2**********'
 
@@ -118,6 +122,7 @@ if flag == 2:
 
 
     for p in private_networks_dict:
+        p = "violet_private_3"
         print "\n\n\n@@@@@@@@@@@@@@@@@@@@@@@@@@\nNETWORK - {0}\n\n".format(p)
         p_dict = private_networks_dict[p]
         gw = p_dict["gateway"]
@@ -261,6 +266,7 @@ if flag == 2:
                 f_pi3b_p.write(str(c_avg)+","+str(c_median)+"\n")
 
             pvt_dev_client.close()
+        break
 
 
     f_pi3b.close()

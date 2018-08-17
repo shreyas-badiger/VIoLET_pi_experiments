@@ -1,4 +1,64 @@
 {
+  "Edge-3.7": {
+    "host_vm_name": "M1",
+    "host_vm_ip": "10.0.0.5",
+    "sensors": [
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.2.84:38566/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.2.84:38566/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.2.84:38566/sensors/custom_3",
+          "http://172.24.2.84:38566/sensors/custom_2",
+          "http://172.24.2.84:38566/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_3": "172.24.2.84"
+    }
+  },
+  "Edge-3.6": {
+    "host_vm_name": "M1",
+    "host_vm_ip": "10.0.0.5",
+    "sensors": [
+      {
+        "sensor_type": "accelerometer",
+        "links": [
+          "http://172.24.2.89:38566/sensors/accelerometer_1"
+        ]
+      },
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://172.24.2.89:38566/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://172.24.2.89:38566/sensors/custom_3",
+          "http://172.24.2.89:38566/sensors/custom_2",
+          "http://172.24.2.89:38566/sensors/custom_1"
+        ]
+      }
+    ],
+    "public_networks": {},
+    "private_networks": {
+      "violet_private_3": "172.24.2.89"
+    }
+  },
   "Edge-3.5": {
     "host_vm_name": "M1",
     "host_vm_ip": "10.0.0.5",
@@ -185,7 +245,7 @@
     "host_vm_name": "M1",
     "public_networks": {
       "violet_public_1": {
-        "device_ip":"192.168.0.3",
+        "device_ip":"192.168.0.2",
         "ip": "10.24.24.227",
         "port": 22001
       },
@@ -243,7 +303,7 @@
     "host_vm_name": "M2",
     "public_networks": {
       "violet_public_1": {
-        "device_ip":"192.168.0.2",
+        "device_ip":"192.168.0.3",
         "ip": "10.24.24.227",
         "port": 22000
       },
