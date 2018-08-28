@@ -59,7 +59,7 @@ iperf["expected_latency_ms"] = network_dict[network]["latency_ms"]
 print "*****BANDWIDTH*****"
 num_connected_devices = len(devices)
 iperf_numbers = {}
-
+latency_numbers = {}
 if network_type == "pub":
     for i in range(0,num_connected_devices):
         device1 = devices[i]
@@ -71,7 +71,6 @@ if network_type == "pub":
 
     	for j in range(i+1,num_connected_devices):
             iperf_i = {}
-            latency_numbers = {}
 
     	    device1_client = paramiko.SSHClient()
     	    device1_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -99,7 +98,7 @@ if network_type == "pub":
 	    iperf_i["device1"] = device1
 	    iperf_i["device2"] = device2
 	    iperf_i["observed_bandwidth_mbps"] = bw
-	    iperf_numbers[device1]= iperf_i
+	    iperf_numbers[device1+"_"+device2]= iperf_i
 
     	    command = "fping -e -c2 -t500 {0} | grep bytes".format(ip)
     	    stdin , stdout, stderr = device2_client.exec_command(command,timeout = 5)
@@ -115,7 +114,7 @@ if network_type == "pub":
                 if(output[5]):
 		    print "{0} -> {1} [{2}ms (rtt)]".format(device1, device2, output[5])
             	    latency_i["observed_latency_ms"]= output[5]
-                latency_numbers[device1] = latency_i
+                latency_numbers[device1+"_"+device2] = latency_i
     	    else:
        	        print "ERROR! {0} <-> {1} are either not connected or not in same network".format(device1,device2)
 	    device1_client.close()
@@ -158,6 +157,7 @@ if network_type == "pvt":
         device2_user = "pi"
 	local_addr = (gw_host, gw_port)
 	dest_addr = (device2_host, device2_port)
+        print "local_addr ={} dest_addr ={} gw_port={} device2_port={}".format(local_addr,dest_addr,gw_port,device2_port)
 	gw_client2_channel = gw_client2_transport.open_channel("direct-tcpip", dest_addr, local_addr)
 
         device2_client = paramiko.SSHClient()
@@ -174,7 +174,7 @@ if network_type == "pvt":
 	iperf_i["device1"] = gw
 	iperf_i["device2"] = device2
 	iperf_i["observed_bandwidth_mbps"] = bw
-	iperf_numbers[gw]= iperf_i
+	iperf_numbers[gw+"_"+device2]= iperf_i
 
 	gw_client2.close()
 	device2_client.close()
@@ -238,7 +238,7 @@ if network_type == "pvt":
 	    iperf_i["device1"] = device1
 	    iperf_i["device2"] = device2
 	    iperf_i["observed_bandwidth_mbps"] = bw
-	    iperf_numbers[device1]= iperf_i
+	    iperf_numbers[device1+"_"+device2]= iperf_i
 
 	    gw_client2.close()
 	    device2_client.close()
@@ -288,7 +288,7 @@ if network_type == "pvt":
                 if(output[5]):
 		    print "{0} -> {1} [{2}ms (rtt)]".format(device1, device2, output[5])
             	    latency_i["observed_latency_ms"]= output[5]
-                latency_numbers[device1] = latency_i
+                latency_numbers[device1+"_"+device2] = latency_i
     	    else:
        	        print "ERROR! {0} <-> {1} are either not connected or not in same network".format(device1,device2)
             device2_client.close()

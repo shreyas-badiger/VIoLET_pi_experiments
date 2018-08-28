@@ -247,6 +247,38 @@
       "violet_public_1": {
         "device_ip":"192.168.0.2",
         "ip": "10.24.24.227",
+        "port": 22000
+      },
+      "docker_d0_bridge": "172.17.0.5"
+    },
+    "host_vm_ip": "10.0.0.5",
+    "sensors": [
+      {
+        "sensor_type": "gyroscope",
+        "links": [
+          "http://10.24.24.227:37109/sensors/gyroscope_1"
+        ]
+      },
+      {
+        "sensor_type": "custom",
+        "links": [
+          "http://10.24.24.227:37109/sensors/custom_4",
+          "http://10.24.24.227:37109/sensors/custom_3",
+          "http://10.24.24.227:37109/sensors/custom_2",
+          "http://10.24.24.227:37109/sensors/custom_1"
+        ]
+      }
+    ]
+  },
+  "Fog-4": {
+    "public_global_network": "10.0.2.4",
+    "private_networks": {
+    },
+    "host_vm_name": "M1",
+    "public_networks": {
+      "violet_public_1": {
+        "device_ip":"192.168.0.5",
+        "ip": "10.24.24.227",
         "port": 22001
       },
       "docker_d0_bridge": "172.17.0.5"
@@ -270,6 +302,7 @@
       }
     ]
   },
+
   "Edge-1.5": {
     "host_vm_name": "M3",
     "host_vm_ip": "10.0.0.7",
@@ -305,7 +338,7 @@
       "violet_public_1": {
         "device_ip":"192.168.0.3",
         "ip": "10.24.24.227",
-        "port": 22000
+        "port": 22001
       },
       "docker_d0_bridge": "172.17.0.2"
     },
