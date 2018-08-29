@@ -44,7 +44,7 @@
         }
       ],
       "port": 38566,
-      "device_type": "Pi3B"
+      "device_type": "Pi2B"
     },
    "Edge-3.6": {
       "sensors": [
@@ -99,7 +99,7 @@
         }
       ],
       "port": 43119,
-      "device_type": "Pi2B"
+      "device_type": "Pi3B"
     },
     "Edge-3.1": {
       "sensors": [
@@ -117,7 +117,7 @@
         }
       ],
       "port": 35504,
-      "device_type": "Pi3B+"
+      "device_type": "Pi3B"
     },
     "Edge-3.3": {
       "sensors": [
@@ -242,7 +242,7 @@
         }
       ],
       "port": 48297,
-      "device_type": "Pi3B"
+      "device_type": "Pi3B+"
     },
     "Edge-1.2": {
       "sensors": [
@@ -252,7 +252,7 @@
         }
       ],
       "port": 38624,
-      "device_type": "Pi3B"
+      "device_type": "Pi3B+"
     },
     "Edge-1.1": {
       "sensors": [

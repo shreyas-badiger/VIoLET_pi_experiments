@@ -6,27 +6,27 @@
       {
         "sensor_type": "accelerometer",
         "links": [
-          "http://172.24.2.41:38566/sensors/accelerometer_1"
+          "http://172.24.2.84:38566/sensors/accelerometer_1"
         ]
       },
       {
         "sensor_type": "gyroscope",
         "links": [
-          "http://172.24.2.41:38566/sensors/gyroscope_1"
+          "http://172.24.2.84:38566/sensors/gyroscope_1"
         ]
       },
       {
         "sensor_type": "custom",
         "links": [
-          "http://172.24.2.41:38566/sensors/custom_3",
-          "http://172.24.2.41:38566/sensors/custom_2",
-          "http://172.24.2.41:38566/sensors/custom_1"
+          "http://172.24.2.84:38566/sensors/custom_3",
+          "http://172.24.2.84:38566/sensors/custom_2",
+          "http://172.24.2.84:38566/sensors/custom_1"
         ]
       }
     ],
     "public_networks": {},
     "private_networks": {
-      "violet_private_3": "172.24.2.41"
+      "violet_private_3": "172.24.2.84"
     }
   },
   "Edge-3.6": {
@@ -66,27 +66,27 @@
       {
         "sensor_type": "accelerometer",
         "links": [
-          "http://172.24.2.7:38566/sensors/accelerometer_1"
+          "http://172.24.2.83:38566/sensors/accelerometer_1"
         ]
       },
       {
         "sensor_type": "gyroscope",
         "links": [
-          "http://172.24.2.7:38566/sensors/gyroscope_1"
+          "http://172.24.2.83:38566/sensors/gyroscope_1"
         ]
       },
       {
         "sensor_type": "custom",
         "links": [
-          "http://172.24.2.7:38566/sensors/custom_3",
-          "http://172.24.2.7:38566/sensors/custom_2",
-          "http://172.24.2.7:38566/sensors/custom_1"
+          "http://172.24.2.83:38566/sensors/custom_3",
+          "http://172.24.2.83:38566/sensors/custom_2",
+          "http://172.24.2.83:38566/sensors/custom_1"
         ]
       }
     ],
     "public_networks": {},
     "private_networks": {
-      "violet_private_3": "172.24.2.7"
+      "violet_private_3": "172.24.2.83"
     }
   },
   "Edge-3.4": {
@@ -96,27 +96,27 @@
       {
         "sensor_type": "gyroscope",
         "links": [
-          "http://172.24.2.84:43119/sensors/gyroscope_1"
+          "http://172.24.2.13:43119/sensors/gyroscope_1"
         ]
       },
       {
         "sensor_type": "accelerometer",
         "links": [
-          "http://172.24.2.84:43119/sensors/accelerometer_2",
-          "http://172.24.2.84:43119/sensors/accelerometer_1"
+          "http://172.24.2.13:43119/sensors/accelerometer_2",
+          "http://172.24.2.13:43119/sensors/accelerometer_1"
         ]
       },
       {
         "sensor_type": "custom",
         "links": [
-          "http://172.24.2.84:43119/sensors/custom_2",
-          "http://172.24.2.84:43119/sensors/custom_1"
+          "http://172.24.2.13:43119/sensors/custom_2",
+          "http://172.24.2.13:43119/sensors/custom_1"
         ]
       }
     ],
     "public_networks": {},
     "private_networks": {
-      "violet_private_3": "172.24.2.84"
+      "violet_private_3": "172.24.2.13"
     }
   },
   "Edge-3.1": {
@@ -126,27 +126,27 @@
       {
         "sensor_type": "gyroscope",
         "links": [
-          "http://172.24.2.19:35504/sensors/gyroscope_1"
+          "http://172.24.2.7:35504/sensors/gyroscope_1"
         ]
       },
       {
         "sensor_type": "accelerometer",
         "links": [
-          "http://172.24.2.19:35504/sensors/accelerometer_1"
+          "http://172.24.2.7:35504/sensors/accelerometer_1"
         ]
       },
       {
         "sensor_type": "custom",
         "links": [
-          "http://172.24.2.19:35504/sensors/custom_3",
-          "http://172.24.2.19:35504/sensors/custom_2",
-          "http://172.24.2.19:35504/sensors/custom_1"
+          "http://172.24.2.7:35504/sensors/custom_3",
+          "http://172.24.2.7:35504/sensors/custom_2",
+          "http://172.24.2.7:35504/sensors/custom_1"
         ]
       }
     ],
     "public_networks": {},
     "private_networks": {
-      "violet_private_3": "172.24.2.19"
+      "violet_private_3": "172.24.2.7"
     }
   },
   "Edge-3.3": {
@@ -156,22 +156,22 @@
       {
         "sensor_type": "gyroscope",
         "links": [
-          "http://172.24.2.13:26169/sensors/gyroscope_3",
-          "http://172.24.2.13:26169/sensors/gyroscope_2",
-          "http://172.24.2.13:26169/sensors/gyroscope_1"
+          "http://172.24.2.59:26169/sensors/gyroscope_3",
+          "http://172.24.2.59:26169/sensors/gyroscope_2",
+          "http://172.24.2.59:26169/sensors/gyroscope_1"
         ]
       },
       {
         "sensor_type": "custom",
         "links": [
-          "http://172.24.2.13:26169/sensors/custom_2",
-          "http://172.24.2.13:26169/sensors/custom_1"
+          "http://172.24.2.59:26169/sensors/custom_2",
+          "http://172.24.2.59:26169/sensors/custom_1"
         ]
       }
     ],
     "public_networks": {},
     "private_networks": {
-      "violet_private_3": "172.24.2.13"
+      "violet_private_3": "172.24.2.59"
     }
   },
   "Edge-3.2": {
@@ -181,27 +181,27 @@
       {
         "sensor_type": "accelerometer",
         "links": [
-          "http://172.24.2.83:11119/sensors/accelerometer_2",
-          "http://172.24.2.83:11119/sensors/accelerometer_1"
+          "http://172.24.2.41:11119/sensors/accelerometer_2",
+          "http://172.24.2.41:11119/sensors/accelerometer_1"
         ]
       },
       {
         "sensor_type": "gyroscope",
         "links": [
-          "http://172.24.2.83:11119/sensors/gyroscope_2",
-          "http://172.24.2.83:11119/sensors/gyroscope_1"
+          "http://172.24.2.41:11119/sensors/gyroscope_2",
+          "http://172.24.2.41:11119/sensors/gyroscope_1"
         ]
       },
       {
         "sensor_type": "custom",
         "links": [
-          "http://172.24.2.83:11119/sensors/custom_1"
+          "http://172.24.2.41:11119/sensors/custom_1"
         ]
       }
     ],
     "public_networks": {},
     "private_networks": {
-      "violet_private_3": "172.24.2.83"
+      "violet_private_3": "172.24.2.41"
     }
   },
   "Fog-2": {
@@ -245,7 +245,7 @@
     "host_vm_name": "M1",
     "public_networks": {
       "violet_public_1": {
-        "device_ip":"192.168.0.3",
+        "device_ip":"192.168.0.2",
         "ip": "10.24.24.227",
         "port": 22001
       },
@@ -336,7 +336,7 @@
     "host_vm_name": "M2",
     "public_networks": {
       "violet_public_1": {
-        "device_ip":"192.168.0.2",
+        "device_ip":"192.168.0.3",
         "ip": "10.24.24.227",
         "port": 22000
       },

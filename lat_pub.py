@@ -67,11 +67,10 @@ if network_type == "pub":
         device1_port = deployment_output[device1][network_t][network]["port"]
         device1_user = "pi"
         device1_key = "/Users/shreyas/pi_key"
+    	k = paramiko.RSAKey.from_private_key_file(device1_key)
 
     	for j in range(i+1,num_connected_devices):
             iperf_i = {}
-
-            k = paramiko.RSAKey.from_private_key_file(device1_key)
 
     	    device1_client = paramiko.SSHClient()
     	    device1_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -82,81 +81,87 @@ if network_type == "pub":
             ip = deployment_output[device1][network_t][network]["device_ip"]
 
 	    device1_client.close()
+
 	    device2 = devices[j]
-            print "{0} --> {1}".format(device2, device1)
+            device2_host = deployment_output[device2][network_t][network]["ip"]
+            print "device2 - {}".format(device2_host)
+            print "device1 - {}".format(ip)
+            device2_port = deployment_output[device2][network_t][network]["port"]
+            device2_user = "pi"
+    	    device2_client = paramiko.SSHClient()
+    	    device2_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+	    device2_client.connect(hostname = device2_host, port = device2_port, username = device2_user, pkey = k)
 
-
-            if device2 == "Fog-4":
-                gw = "Fog-1"
-                pub_network = deployment_output[gw]["public_networks"].keys()
-                gw_host = deployment_output[gw]["public_networks"][pub_network[0]]["ip"]
-                gw_port = int(deployment_output[gw]["public_networks"][pub_network[0]]["port"])
-                gw_user = "pi"
-                gw_key = "/Users/shreyas/pi_key"
-                k = paramiko.RSAKey.from_private_key_file(gw_key)
-
-    	        gw_client2 = paramiko.SSHClient()
-    	        gw_client2.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
-	        gw_client2.connect(hostname = gw_host, port = gw_port, username = gw_user, pkey = k)
-                gw_client2_transport = gw_client2.get_transport()
-
-	        device2_host = deployment_output[device2][network_t][network]["device_ip"]
-                device2_port = 22
-                device2_user = "ubuntu"
-	        local_addr = (gw_host, gw_port)
-	        dest_addr = (device2_host, device2_port)
-                #print "local_addr ={} dest_addr ={} gw_port={} device2_port={}".format(local_addr,dest_addr,gw_port,device2_port)
-	        gw_client2_channel = gw_client2_transport.open_channel("direct-tcpip", dest_addr, local_addr)
-
-                device2_client = paramiko.SSHClient()
-                device2_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-	        device2_client.connect(hostname = device2_host, username = device2_user, pkey = k, sock = gw_client2_channel)
-
-            else:
-                device2_host = deployment_output[device2][network_t][network]["ip"]
-                device2_port = deployment_output[device2][network_t][network]["port"]
-                device2_user = "pi"
-    	        device2_client = paramiko.SSHClient()
-    	        device2_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-	        device2_client.connect(hostname = device2_host, port = device2_port, username = device2_user, pkey = k)
-
-            if device2 != "Fog-4":
-                command = "sudo iwconfig wlan0 | grep \"Bit\" | awk '{{print $2}}'"
-    	        stdin , stdout, stderr = device2_client.exec_command(command)
-    	        result = stdout.read()
-    	        result = result.split("\n")[0].split("=")[1]
-    	        print "expected - {}".format(result)
-	        iperf_i["expected_bandwidth_mbps"] = result
+            """
+            command = "sudo iwconfig wlan0 | grep \"Bit\" | awk '{{print $2}}'"
+    	    stdin , stdout, stderr = device2_client.exec_command(command)
+    	    result = stdout.read()
+    	    result = result.split("\n")[0].split("=")[1]
+    	    print "expected - {}".format(result)
+	    iperf_i["expected_bandwidth_mbps"] = result
 
 	    command = "iperf3 -c {0} -p 4343 | grep sender | awk '{{print $7}}' &".format(ip)
 	    stdin , stdout, stderr = device2_client.exec_command(command)
 	    bw = stdout.read()
 	    bw = bw.replace(' ','')[:-1]
-	    print "Observed BW - {0}Mbps".format(bw)
+	    print "\t{0} <-> {1} [{2}Mbps]".format(device1, device2, bw)
 	    iperf_i["device1"] = device1
 	    iperf_i["device2"] = device2
 	    iperf_i["observed_bandwidth_mbps"] = bw
 	    iperf_numbers[device1+"_"+device2]= iperf_i
+            """
 
-    	    command = "fping -e -c10 -t500 {0} | grep bytes".format(ip)
-    	    stdin , stdout, stderr = device2_client.exec_command(command,timeout = 50)
-
-	    latency_i = {}
+            latency_i = {}
     	    latency_i["device_1"] = device1
     	    latency_i["device_2"] = device2
 
+            count = 100
+    	    command = "ping -c{1} {0} | grep time= | awk '{{split($7, a, \"=\"); print a[2]}}'".format(ip,count)
+    	    stdin , stdout, stderr = device2_client.exec_command(command,timeout = 500)
+
+            print "{}->{}".format(device2, device1)
+
             output = stdout.read()
-    	    output = output.split("\n")
+            output = output.split("\n")
+            output.pop()
+
+            lat = []
+            for o in output:
+                print float(o)
+                lat.append(float(o))
+
+            #latency_i["observed_latency"] = lat
+
+
+            """
+            output = stdout.read()
+    	    output = output.split("=")[1].split("/")
+
+            min_lat = float(output[0])
+            avg_lat = float(output[1])
+            max_lat = float(output[2])
+            print "{}->{}".format(device2, device1)
+            print "min - {}, avg = {}, max = {}".format(min_lat, avg_lat, max_lat)
+
+            latency_i["min_observed_latency_ms"]= min_lat
+            latency_i["avg_observed_latency_ms"]= avg_lat
+            latency_i["max_observed_latency_ms"]= max_lat
+            """
+
+
+            """
     	    if(len(output)>1):
                 output = output[1].split(" ")
                 if(output[5]):
-		    print "Observed latency - {0}ms (rtt)\n".format(output[5])
+		    print "{0} -> {1} [{2}ms (rtt)]".format(device1, device2, output[5])
             	    latency_i["observed_latency_ms"]= output[5]
+                    print "Latency - {}ms".format(output[5])
                 latency_numbers[device1+"_"+device2] = latency_i
     	    else:
        	        print "ERROR! {0} <-> {1} are either not connected or not in same network".format(device1,device2)
-	    device1_client.close()
+            """
+
+            device1_client.close()
             device2_client.close()
 
     iperf["bandwidth_numbers"] = iperf_numbers
