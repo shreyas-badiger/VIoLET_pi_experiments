@@ -139,8 +139,8 @@ if network_type == "pub":
 	    iperf_i["observed_bandwidth_mbps"] = bw
 	    iperf_numbers[device1+"_"+device2]= iperf_i
 
-    	    command = "fping -e -c10 -t500 {0} | grep bytes".format(ip)
-    	    stdin , stdout, stderr = device2_client.exec_command(command,timeout = 50)
+    	    command = "fping -e -c20 -t500 {0} | grep bytes".format(ip)
+    	    stdin , stdout, stderr = device2_client.exec_command(command,timeout = 500)
 
 	    latency_i = {}
     	    latency_i["device_1"] = device1

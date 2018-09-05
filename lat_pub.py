@@ -83,14 +83,43 @@ if network_type == "pub":
 	    device1_client.close()
 
 	    device2 = devices[j]
-            device2_host = deployment_output[device2][network_t][network]["ip"]
-            print "device2 - {}".format(device2_host)
-            print "device1 - {}".format(ip)
-            device2_port = deployment_output[device2][network_t][network]["port"]
-            device2_user = "pi"
-    	    device2_client = paramiko.SSHClient()
-    	    device2_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-	    device2_client.connect(hostname = device2_host, port = device2_port, username = device2_user, pkey = k)
+
+	    if device2 == "Fog-4":
+                gw = "Fog-1"
+                pub_network = deployment_output[gw]["public_networks"].keys()
+                gw_host = deployment_output[gw]["public_networks"][pub_network[0]]["ip"]
+                gw_port = int(deployment_output[gw]["public_networks"][pub_network[0]]["port"])
+                gw_user = "pi"
+                gw_key = "/Users/shreyas/pi_key"
+                k = paramiko.RSAKey.from_private_key_file(gw_key)
+
+                gw_client2 = paramiko.SSHClient()
+                gw_client2.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+                gw_client2.connect(hostname = gw_host, port = gw_port, username = gw_user, pkey = k)
+                gw_client2_transport = gw_client2.get_transport()
+
+                device2_host = deployment_output[device2][network_t][network]["device_ip"]
+                device2_port = 22
+                device2_user = "ubuntu"
+                local_addr = (gw_host, gw_port)
+                dest_addr = (device2_host, device2_port)
+                #print "local_addr ={} dest_addr ={} gw_port={} device2_port={}".format(local_addr,dest_addr,gw_port,device2_port)
+                gw_client2_channel = gw_client2_transport.open_channel("direct-tcpip", dest_addr, local_addr)
+
+                device2_client = paramiko.SSHClient()
+                device2_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                device2_client.connect(hostname = device2_host, username = device2_user, pkey = k, sock = gw_client2_channel)
+
+	    else:
+            	device2_host = deployment_output[device2][network_t][network]["ip"]
+            	print "device2 - {}".format(device2_host)
+            	print "device1 - {}".format(ip)
+            	device2_port = deployment_output[device2][network_t][network]["port"]
+            	device2_user = "pi"
+    	    	device2_client = paramiko.SSHClient()
+    	    	device2_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+	    	device2_client.connect(hostname = device2_host, port = device2_port, username = device2_user, pkey = k)
 
             """
             command = "sudo iwconfig wlan0 | grep \"Bit\" | awk '{{print $2}}'"

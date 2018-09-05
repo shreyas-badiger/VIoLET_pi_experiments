@@ -245,7 +245,7 @@
     "host_vm_name": "M1",
     "public_networks": {
       "violet_public_1": {
-        "device_ip":"192.168.0.3",
+        "device_ip":"192.168.0.8",
         "ip": "10.24.24.227",
         "port": 22001
       },
@@ -277,7 +277,7 @@
     "host_vm_name": "M1",
     "public_networks": {
       "violet_public_1": {
-        "device_ip":"192.168.0.5",
+        "device_ip":"192.168.0.6",
         "ip": "10.24.24.227",
         "port": 22001
       },
@@ -336,7 +336,7 @@
     "host_vm_name": "M2",
     "public_networks": {
       "violet_public_1": {
-        "device_ip":"192.168.0.2",
+        "device_ip":"192.168.0.5",
         "ip": "10.24.24.227",
         "port": 22000
       },
