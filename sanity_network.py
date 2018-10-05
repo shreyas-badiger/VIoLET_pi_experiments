@@ -55,7 +55,7 @@ iperf["expected_bandwidth_mbps"] = network_dict[network]["bandwidth_mbps"]
 iperf["expected_latency_ms"] = network_dict[network]["latency_ms"]
 
 
-#Bandwidth
+#BANDWIDTH
 print "*****BANDWIDTH*****"
 num_connected_devices = len(devices)
 iperf_numbers = {}
